@@ -26,6 +26,7 @@ SECRET_KEY = "django-insecure-m59=!kds2!8bjvkfx93opi2a!q3$8jk7r@d8#9*5y*qyi)b$v^
 DEBUG = True
 
 ALLOWED_HOSTS = ['Peerachai.pythonanywhere.com']
+#Peerachai.pythonanywhere.com
 
 
 # Application definition
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "web_test",
 ]
 
 MIDDLEWARE = [
@@ -121,3 +123,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CSRF_TRUSTED_ORIGINS = ["https://hostname"]
