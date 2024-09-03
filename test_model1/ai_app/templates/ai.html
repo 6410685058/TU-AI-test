@@ -1,0 +1,22 @@
+<!-- ai_app/templates/ai.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI API Test</title>
+</head>
+<body>
+    <h1>Test AI API</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="user_input">Enter your question:</label>
+        <input type="text" id="user_input" name="user_input">
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if response_text %}
+        <h2>Response from AI:</h2>
+        <p>{{ response_text }}</p>
+    {% endif %}
+</body>
+</html>
